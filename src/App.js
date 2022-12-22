@@ -16,7 +16,7 @@ function App() {
                setShowTooltip(false);
             }}
          >
-            <h2>Hover over me!</h2>
+            <h2>Hover over mexxxx!</h2>
 
             {showTooltip && (
 					<span className={`${position} toolTip`}>Thanks for hovering!</span>

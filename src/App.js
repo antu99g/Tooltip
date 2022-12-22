@@ -1,25 +1,38 @@
-import logo from './logo.svg';
+import { useState } from 'react';
 import './App.css';
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+	const [position, setPosition] = useState('right');
+	const [showTooltip, setShowTooltip] = useState(false);
+
+	return (
+      <div className="App">
+         <span
+				className='container'
+            onMouseEnter={() => {
+               setShowTooltip(true);
+            }}
+            onMouseLeave={() => {
+               setShowTooltip(false);
+            }}
+         >
+            <h2>Hover over me!</h2>
+
+            {showTooltip && (
+					<span className={`${position} toolTip`}>Thanks for hovering!</span>
+            )}
+         </span>
+
+         <h3 className='positionHeading'>Tooltip Position</h3>
+
+         <select onChange={(e) => {setPosition(e.target.value)}}>
+            <option value="right">Right</option>
+            <option value="bottom">Bottom</option>
+            <option value="left">Left</option>
+            <option value="top">Top</option>
+         </select>
+      </div>
+   );
 }
 
 export default App;

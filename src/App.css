@@ -1,38 +1,77 @@
-.App {
+.App{
   text-align: center;
+  margin-top: 30vh;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Verdana, sans-serif, sans-serif;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+/* Container of hover section */
+.container{
+  position: relative;
+  padding: 13px 10px 10px;
+  border: 3px dotted grey;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.container:hover{
+  cursor: pointer;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+.container h2{
+  display: inline-block;
+}
+.toolTip{
+  min-width: 150px;
+  padding: 10px;
+  border-radius: 10px;
+  position: absolute;
+  font-size: 1.2em;
+  background-color: teal;
   color: white;
 }
-
-.App-link {
-  color: #61dafb;
+.toolTip:before{
+  content: "";
+  height: 15px;
+  width: 15px;
+  position: absolute;
+  background-color: teal;
+  transform: rotate(45deg);
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+/* Styles for different positions of tool-tip */
+.right{
+  left: 110%;
+}
+.right:before {
+  right: 95%;
+  top: 40%;
+}
+.bottom{
+  left: 0;
+  top: 140%;
+}
+.bottom:before{
+  left: 45%;
+  bottom: 85%;
+}
+.left{
+  right: 110%;
+}
+.left:before{
+  right: -4%;
+  top: 40%;
+}
+.top{
+  left: 0;
+  bottom: 140%;
+}
+.top:before{
+  left: 45%;
+  bottom: -10%;
+}
+
+/* Tooltip-position section */
+.positionHeading{
+  margin-bottom: 5px;
+  color: grey;
+}
+select{
+  padding: 2px;
+  font-size: 1.1em;
 }

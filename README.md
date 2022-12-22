@@ -28,4 +28,4 @@ Run this command before deployment
 
 ## Screenshots
 
-<img src='https://user-images.githubusercontent.com/114740896/209113634-6c28850e-03bf-448b-a279-1a7398f1976c.png' height='400' width='200'>&ensp; <img src='https://user-images.githubusercontent.com/114740896/209113833-9dce60e0-e68d-4f49-833f-97f8a1ec872b.png' height='400' width='200'>
+<img src='https://user-images.githubusercontent.com/114740896/209113634-6c28850e-03bf-448b-a279-1a7398f1976c.png' width='400' height='200'>&ensp; <img src='https://user-images.githubusercontent.com/114740896/209113833-9dce60e0-e68d-4f49-833f-97f8a1ec872b.png' width='400' height='200'>
